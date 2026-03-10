@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Anny Sen | DevOps Engineer</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            transition: 0.3s;
+        }
+    </style>
+
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- NAVBAR -->
+
+    <nav class="fixed w-full bg-white shadow z-50">
+
+        <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+
+            <h1 class="font-bold text-xl text-blue-600">
+                Anny Sen
+            </h1>
+
+            <ul class="hidden md:flex gap-6 font-medium">
+
+                <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+                <li><a href="#about" class="hover:text-blue-600">About</a></li>
+                <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
+                <li><a href="#certifications" class="hover:text-blue-600">Certifications</a></li>
+                <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+
+            </ul>
+
+            <button class="md:hidden text-2xl" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden bg-white shadow">
+
+            <ul class="flex flex-col text-center py-4 gap-4 font-medium">
+
+                <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+                <li><a href="#certifications" onclick="toggleMenu()">Certifications</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <section id="home" class="h-screen flex items-center justify-center text-white relative pt-20">
+
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa"
+            class="absolute w-full h-full object-cover">
+
+        <div class="absolute inset-0 bg-black/60"></div>
+
+        <div class="relative text-center px-6" data-aos="fade-up">
+
+            <h1 class="text-5xl font-bold mb-4">
+                Hi, I'm <span class="text-blue-400">Anny Sen</span>
+            </h1>
+
+            <p class="text-2xl mb-6">
+                DevOps & Cloud Engineer
+            </p>
+
+            <p class="max-w-xl mx-auto mb-8">
+
+                Focused on automation, containerization,
+                CI/CD pipelines and scalable cloud infrastructure.
+
+            </p>
+
+            <div class="flex justify-center gap-4 flex-wrap">
+
+                <a href="https://github.com/annysen" target="_blank"
+                    class="bg-gray-800 px-6 py-3 rounded-lg hover:bg-black">
+                    Github
+                </a>
+
+                <a href="https://www.linkedin.com/in/annysen/" target="_blank"
+                    class="bg-blue-600 px-6 py-3 rounded-lg hover:bg-blue-700">
+                    LinkedIn
+                </a>
+
+                <a href="YOUR_GOOGLE_DRIVE_LINK" target="_blank"
+                    class="bg-green-500 px-6 py-3 rounded-lg hover:bg-green-600">
+                    Download Resume
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section id="about" class="py-20 bg-white">
+
+        <div class="max-w-4xl mx-auto text-center px-6" data-aos="fade-up">
+
+            <h2 class="text-3xl font-bold mb-6">
+                About Me
+            </h2>
+
+            <p class="text-lg">
+
+                I am a DevOps enthusiast passionate about building reliable,
+                automated and scalable infrastructure using cloud technologies,
+                containers and CI/CD pipelines.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- SKILLS -->
+
+    <section id="skills" class="py-20">
+
+        <h2 class="text-3xl font-bold text-center mb-12">
+            Skills
+        </h2>
+
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-6">
+
+            <div class="card bg-white p-6 rounded-lg shadow text-center" data-aos="zoom-in">
+                <i class="fa-brands fa-linux text-5xl text-blue-500 mb-4"></i>
+                <h3 class="font-bold text-xl">Linux</h3>
+            </div>
+
+            <div class="card bg-white p-6 rounded-lg shadow text-center" data-aos="zoom-in">
+                <i class="fa-brands fa-docker text-5xl text-blue-500 mb-4"></i>
+                <h3 class="font-bold text-xl">Docker</h3>
+            </div>
+
+            <div class="card bg-white p-6 rounded-lg shadow text-center" data-aos="zoom-in">
+                <i class="fa-solid fa-cloud text-5xl text-blue-500 mb-4"></i>
+                <h3 class="font-bold text-xl">Cloud</h3>
+            </div>
+
+            <div class="card bg-white p-6 rounded-lg shadow text-center" data-aos="zoom-in">
+                <i class="fa-solid fa-code-branch text-5xl text-blue-500 mb-4"></i>
+                <h3 class="font-bold text-xl">CI/CD</h3>
+            </div>
+
+            <div class="card bg-white p-6 rounded-lg shadow text-center" data-aos="zoom-in">
+                <i class="fa-brands fa-git-alt text-5xl text-blue-500 mb-4"></i>
+                <h3 class="font-bold text-xl">Git</h3>
+            </div>
+
+            <div class="card bg-white p-6 rounded-lg shadow text-center" data-aos="zoom-in">
+                <i class="fa-solid fa-server text-5xl text-blue-500 mb-4"></i>
+                <h3 class="font-bold text-xl">Infrastructure</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CERTIFICATIONS -->
+
+    <section id="certifications" class="py-20 bg-white">
+
+        <h2 class="text-3xl font-bold text-center mb-12">
+            Certifications
+        </h2>
+
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-6">
+
+            <!-- vmware cert -->
+            <div onclick="openCert('VMware Certification','Certification related to VMware VCP.','img/vcp-cert.jpg')"
+                class="card bg-white shadow rounded-lg overflow-hidden cursor-pointer">
+
+                <img src="img/vcp-cert.jpg" class="w-full h-48 object-cover">
+
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2">
+                        VMware Certification
+                    </h3>
+                </div>
+
+            </div>
+
+            <!-- dba cert  -->
+            <div onclick="openCert('Oracle Certification','Oracle Certified Professional MySQL 8.0 Database Administrator.','img/dba-cert.jpg')"
+                class="card bg-white shadow rounded-lg overflow-hidden cursor-pointer">
+
+                <img src="img/dba-cert.jpg"
+                    class="w-full h-48 object-cover">
+
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2">
+                        Oracle Certification
+                    </h3>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- POPUP -->
+
+    <div id="popup" class="fixed inset-0 bg-black/70 hidden items-center justify-center p-6">
+
+        <div class="bg-white rounded-lg max-w-4xl w-full p-6 relative">
+
+            <button onclick="closeCert()" class="absolute top-4 right-4 text-2xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="grid md:grid-cols-2 gap-6 items-center">
+
+                <div>
+
+                    <h3 id="certTitle" class="text-2xl font-bold mb-4"></h3>
+
+                    <p id="certDesc" class="text-gray-700"></p>
+
+                </div>
+
+                <img id="certImage" class="w-full rounded shadow">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="py-20">
+
+        <div class="text-center" data-aos="fade-up">
+
+            <h2 class="text-3xl font-bold mb-6">
+                Contact
+            </h2>
+
+            <div class="flex justify-center gap-8 text-3xl">
+
+                <a href="https://github.com/annysen" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/annysen/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="text-center py-6 bg-gray-200">
+        © 2026 Anny Sen
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+
+        AOS.init({ duration: 1000 })
+
+        function toggleMenu() {
+            document.getElementById("mobileMenu").classList.toggle("hidden")
+        }
+
+        function openCert(title, desc, img) {
+
+            document.getElementById("popup").style.display = "flex"
+
+            document.getElementById("certTitle").innerText = title
+
+            document.getElementById("certDesc").innerText = desc
+
+            document.getElementById("certImage").src = img
+
+        }
+
+        function closeCert() {
+            document.getElementById("popup").style.display = "none"
+        }
+
+    </script>
+
+</body>
+
+</html>
