@@ -4,22 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Anny Sen | DevOps & Cloud Engineer</title>
+<title>Anny Sen | DevOps &amp; Cloud Engineer</title>
 <meta name="description" content="Anny Sen is a system engineer moving into DevOps, with hands-on experience in VMware, Veeam backup, Linux, Docker and CI/CD.">
-<meta property="og:title" content="Anny Sen | DevOps & Cloud Engineer">
+<meta property="og:title" content="Anny Sen | DevOps &amp; Cloud Engineer">
 <meta property="og:description" content="System engineer moving into DevOps: automation, containers, CI/CD and cloud infrastructure.">
 <meta property="og:type" content="website">
-<!-- TODO: add <meta property="og:image" content="https://your-site/preview.png"> and your site URL -->
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%99%EF%B8%8F%3C/text%3E%3C/svg%3E">
 
-<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <style>
     html { scroll-behavior: smooth; scroll-padding-top: 72px; }
 
-    /* Fix: transition lives on the base rule so cards animate both up AND down */
     .card { transition: transform 0.3s, box-shadow 0.3s; }
     .card:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0,0,0,0.12); }
 
@@ -37,6 +35,8 @@
 
 <body class="bg-gray-50 text-gray-800">
 
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:bg-white focus:text-blue-700 focus:px-4 focus:py-2 focus:rounded">Skip to content</a>
+
 <!-- NAVBAR -->
 <nav class="fixed w-full bg-white shadow z-50" aria-label="Main">
     <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
@@ -52,31 +52,31 @@
             <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
         </ul>
 
-        <button class="md:hidden text-2xl" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false" id="menuBtn">
-            <i class="fa-solid fa-bars"></i>
+        <button class="md:hidden text-2xl w-10 h-10" id="menuBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+            <i class="fa-solid fa-bars" id="menuIcon" aria-hidden="true"></i>
         </button>
     </div>
 
     <div id="mobileMenu" class="hidden md:hidden bg-white shadow">
         <ul class="flex flex-col text-center py-4 gap-4 font-medium">
-            <li><a href="#home" onclick="toggleMenu()">Home</a></li>
-            <li><a href="#about" onclick="toggleMenu()">About</a></li>
-            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-            <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-            <li><a href="#certifications" onclick="toggleMenu()">Certifications</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            <li><a href="#home" class="menu-link">Home</a></li>
+            <li><a href="#about" class="menu-link">About</a></li>
+            <li><a href="#experience" class="menu-link">Experience</a></li>
+            <li><a href="#projects" class="menu-link">Projects</a></li>
+            <li><a href="#skills" class="menu-link">Skills</a></li>
+            <li><a href="#certifications" class="menu-link">Certifications</a></li>
+            <li><a href="#contact" class="menu-link">Contact</a></li>
         </ul>
     </div>
 </nav>
 
-<main>
+<main id="main">
 
 <!-- HERO -->
 <section id="home" class="min-h-screen flex items-center justify-center text-white relative pt-24 pb-12">
     <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=80"
-         alt="" aria-hidden="true"
-         class="absolute w-full h-full object-cover">
+         alt="" aria-hidden="true" width="1600" height="1067" fetchpriority="high"
+         class="absolute inset-0 w-full h-full object-cover">
     <div class="absolute inset-0 bg-black/60"></div>
 
     <div class="relative text-center px-6" data-aos="fade-up">
@@ -89,15 +89,28 @@
             automation, containers and CI/CD pipelines.
         </p>
 
-        <div class="flex justify-center gap-4 flex-wrap">
-            <a href="#projects" class="bg-blue-600 px-6 py-3 rounded-lg hover:bg-blue-700">View Projects</a>
-            <a href="https://github.com/annysen" target="_blank" rel="noopener"
-               class="bg-gray-800 px-6 py-3 rounded-lg hover:bg-black">GitHub</a>
-            <a href="https://www.linkedin.com/in/annysen/" target="_blank" rel="noopener"
-               class="bg-blue-600 px-6 py-3 rounded-lg hover:bg-blue-700">LinkedIn</a>
-            <!-- TODO: replace with your real resume link (Drive: Share > "Anyone with the link") -->
-            <a href="https://drive.google.com/file/d/1zy1Fu8hbT9k_eXjz_8vg2KO85_Ci3Pun/view?usp=sharing" target="_blank" rel="noopener"
-               class="bg-green-500 px-6 py-3 rounded-lg hover:bg-green-600">Download Resume</a>
+        <div class="flex justify-center gap-4 flex-wrap"><div class="flex justify-center gap-3 sm:gap-4 flex-wrap">
+    <a href="#projects"
+       class="bg-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+        <i class="fa-solid fa-diagram-project mr-2" aria-hidden="true"></i>View Projects
+    </a>
+    <a href="https://drive.google.com/file/d/1zy1Fu8hbT9k_eXjz_8vg2KO85_Ci3Pun/view?usp=sharing"
+       target="_blank" rel="noopener"
+       class="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+        <i class="fa-solid fa-file-arrow-down mr-2" aria-hidden="true"></i>Resume
+        <span class="sr-only">(opens in a new tab)</span>
+    </a>
+    <a href="https://github.com/annysen" target="_blank" rel="noopener"
+       class="border-2 border-white/70 px-6 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-colors">
+        <i class="fa-brands fa-github mr-2" aria-hidden="true"></i>GitHub
+        <span class="sr-only">(opens in a new tab)</span>
+    </a>
+    <a href="https://www.linkedin.com/in/annysen/" target="_blank" rel="noopener"
+       class="border-2 border-white/70 px-6 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-colors">
+        <i class="fa-brands fa-linkedin mr-2" aria-hidden="true"></i>LinkedIn
+        <span class="sr-only">(opens in a new tab)</span>
+    </a>
+</div>
         </div>
     </div>
 </section>
@@ -106,16 +119,19 @@
 <section id="about" class="py-20 bg-white">
     <div class="max-w-3xl mx-auto text-center px-6" data-aos="fade-up">
         <h2 class="text-3xl font-bold mb-6">About Me</h2>
-        <p class="text-lg mb-4">
-            I'm a system engineer moving into DevOps. Over the past two years I've run
-            VMware vSphere, deployed servers, and set up
-            Veeam backup and recovery. Now I'm applying that infrastructure background
-            to automation, containers and CI/CD.
-        </p>
-        <p class="text-lg">
-            Currently building: a public Kubernetes CKS lab, documenting hands-on
-            security practice on GitHub.
-        </p>
+<p class="text-lg mb-4">
+    I'm a system engineer. For the last two years I've worked with servers,
+    VMware and backups. At Global Brand I looked after vSphere and Huawei DCS,
+    set up new servers, and configured Veeam for backup and restore. These days
+    I'm in pre-sales at Ensure Support Services, working with Dell, VMware,
+    Cohesity and Microsoft products.
+</p>
+<p class="text-lg">
+    I want to move into DevOps, so I've been learning Kubernetes. I passed the
+    CKA, I hold the VMware VCP-DCV, and I'm now studying for the CKS. I put my
+    lab notes on GitHub as I go. I'm looking for a DevOps or cloud role where I
+    can use my infrastructure background and keep learning automation and CI/CD.
+</p>
     </div>
 </section>
 
@@ -150,9 +166,9 @@
                 <p class="text-gray-600">Dec 2024 – Apr 2026</p>
             </div>
             <ul class="list-disc pl-5 space-y-2">
-                <li>Managed VMware vSphere and Huawei DCS environments <!-- TODO: add scale, e.g. "(N hosts / N VMs)" --></li>
+                <li>Managed VMware vSphere and Huawei DCS environments</li>
                 <li>Deployed servers: RAID setup and OS installation</li>
-                <li>Configured Veeam Backup &amp; Replication, including scheduling, backup and restore <!-- TODO: add a result, e.g. "for N VMs" --></li>
+                <li>Configured Veeam Backup &amp; Replication, including scheduling, backup and restore</li>
                 <li>Wrote documentation and trained team members</li>
             </ul>
         </div>
@@ -219,21 +235,49 @@
 
     <div class="flex flex-wrap justify-center gap-8 px-6">
 
-        <!-- TODO: make sure the img/ file names below match your files -->
+        <!-- Certified Kubernetes Administrator -->
         <figure class="card w-full max-w-sm bg-gray-50 p-4 rounded-lg shadow">
-            <a href="https://www.credly.com/badges/c9773af7-4570-42e1-b8b8-3d2c719b0f08" target="_blank" rel="noopener" aria-label="Open VMware certificate full size">
-                <img src="img/vcp-cert.jpg" alt="VMware certificate of Anny Sen"
-                     loading="lazy" class="w-full h-64 object-contain bg-white rounded">
+            <a href="https://www.credly.com/badges/b0daf760-df15-450b-85d6-c9a974d0055a/public_url"
+               target="_blank" rel="noopener"
+               aria-label="View CKA certificate">
+                <img src="img/cka.jpg"
+                     alt="Certified Kubernetes Administrator certificate of Anny Sen"
+                     width="600" height="400" loading="lazy"
+                     class="w-full h-64 object-contain bg-white rounded">
             </a>
-            <figcaption class="text-center font-semibold mt-3">VMware Certification</figcaption>
+            <figcaption class="text-center font-semibold mt-3">
+                Certified Kubernetes Administrator (CKA)
+            </figcaption>
         </figure>
 
+        <!-- VMware VCP-DCV -->
         <figure class="card w-full max-w-sm bg-gray-50 p-4 rounded-lg shadow">
-            <a href="img/oracle-dba-cert.jpg" target="_blank" rel="noopener" aria-label="Open Oracle DBA certificate full size">
-                <img src="img/dba-cert.jpg" alt="Oracle DBA certificate of Anny Sen"
-                     loading="lazy" class="w-full h-64 object-contain bg-white rounded">
+            <a href="https://www.credly.com/badges/c9773af7-4570-42e1-b8b8-3d2c719b0f08"
+               target="_blank" rel="noopener"
+               aria-label="View VMware certification">
+                <img src="img/vcp-cert.jpg"
+                     alt="VMware VCP-DCV certification of Anny Sen"
+                     width="600" height="400" loading="lazy"
+                     class="w-full h-64 object-contain bg-white rounded">
             </a>
-            <figcaption class="text-center font-semibold mt-3">Oracle DBA Certification</figcaption>
+            <figcaption class="text-center font-semibold mt-3">
+                VMware VCP-DCV
+            </figcaption>
+        </figure>
+
+        <!-- Oracle DBA -->
+        <figure class="card w-full max-w-sm bg-gray-50 p-4 rounded-lg shadow">
+            <a href="img/dba-cert.jpg"
+               target="_blank" rel="noopener"
+               aria-label="View Oracle DBA certificate">
+                <img src="img/dba-cert.jpg"
+                     alt="Oracle DBA certificate of Anny Sen"
+                     width="600" height="400" loading="lazy"
+                     class="w-full h-64 object-contain bg-white rounded">
+            </a>
+            <figcaption class="text-center font-semibold mt-3">
+                Oracle DBA Certification
+            </figcaption>
         </figure>
 
     </div>
@@ -256,8 +300,8 @@
     </div>
 
     <div class="flex justify-center gap-8 text-3xl">
-        <a href="https://github.com/annysen" target="_blank" rel="noopener" aria-label="Anny Sen on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-        <a href="https://www.linkedin.com/in/annysen/" target="_blank" rel="noopener" aria-label="Anny Sen on LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+        <a href="https://github.com/annysen" target="_blank" rel="noopener" aria-label="Anny Sen on GitHub" class="text-gray-700 hover:text-black"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/annysen/" target="_blank" rel="noopener" aria-label="Anny Sen on LinkedIn" class="text-gray-700 hover:text-blue-600"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
     </div>
 </section>
 
@@ -269,13 +313,28 @@
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
-    AOS.init({ duration: 800, once: true, disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches });
-
-    function toggleMenu() {
-        const menu = document.getElementById("mobileMenu");
-        menu.classList.toggle("hidden");
-        document.getElementById("menuBtn").setAttribute("aria-expanded", !menu.classList.contains("hidden"));
+    if (window.AOS) {
+        AOS.init({ duration: 800, once: true, disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches });
     }
+
+    const menu = document.getElementById("mobileMenu");
+    const menuBtn = document.getElementById("menuBtn");
+    const menuIcon = document.getElementById("menuIcon");
+
+    function setMenu(open) {
+        menu.classList.toggle("hidden", !open);
+        menuBtn.setAttribute("aria-expanded", String(open));
+        menuIcon.className = open ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+    }
+
+    menuBtn.addEventListener("click", () => setMenu(menu.classList.contains("hidden")));
+    document.querySelectorAll(".menu-link").forEach(a => a.addEventListener("click", () => setMenu(false)));
+    document.addEventListener("keydown", e => {
+        if (e.key === "Escape" && !menu.classList.contains("hidden")) {
+            setMenu(false);
+            menuBtn.focus();
+        }
+    });
 </script>
 
 </body>
